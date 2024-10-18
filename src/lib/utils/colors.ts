@@ -1,5 +1,12 @@
 import type { RowCount } from '$lib/types';
 
+import img500 from '$lib/assets/500.png';
+import img100 from '$lib/assets/100.png';
+import img50 from '$lib/assets/50.png';
+import img10 from '$lib/assets/10.png';
+import img7 from '$lib/assets/7.png';
+import img1 from '$lib/assets/1.png';
+
 type RgbColor = { r: number; g: number; b: number };
 
 /**
@@ -28,12 +35,12 @@ export function getBinColors(rowCount: RowCount) {
     const redToYellowLength = Math.ceil(binCount / 2);
 
     const redToYellowBg = [
-      "url(/src/lib/assets/500.png)",
-      "url(/src/lib/assets/100.png)",
-      "url(/src/lib/assets/50.png)",
-      "url(/src/lib/assets/10.png)",
-      "url(/src/lib/assets/7.png)",
-      "url(/src/lib/assets/1.png)",
+      `url(${img500})`,
+      `url(${img100})`,
+      `url(${img50})`,
+      `url(${img10})`,
+      `url(${img7})`,
+      `url(${img1})`,
     ];
 
     const redToYellowShadow = interpolateRgbColors(
