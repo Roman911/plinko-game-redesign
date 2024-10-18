@@ -248,7 +248,7 @@
   <!--  </div>-->
   <!--{/if}-->
 
-  <h3 class="text-2xl text-white uppercase text-center font-bold">a balls:</h3>
+  <h3 class="text-2xl text-white uppercase text-center font-bold">balls:</h3>
 
   <div class="flex w-64 mx-auto gap-1 border border-[#CBE0EC] rounded-lg py-3.5 px-3.5">
     <img class="w-full h-10" src={ boll } alt="">
