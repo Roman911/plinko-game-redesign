@@ -99,15 +99,26 @@
     }
   };
 
+  let i = 0;
+  let a = 0;
+
   function handleBetClick() {
-    if (betMode === BetMode.MANUAL) {
-      $plinkoEngine?.dropBall();
-    } else if (autoBetInterval === null) {
-      autoBetsLeft = autoBetInput === 0 ? null : autoBetInput;
-      autoBetInterval = setInterval(autoBetDropBall, autoBetIntervalMs);
-    } else if (autoBetInterval !== null) {
-      resetAutoBetInterval();
-    }
+    // if(i === 0) {
+      if (betMode === BetMode.MANUAL) {
+        console.log('handleBetClick')
+        $plinkoEngine?.dropBall();
+      } else if (autoBetInterval === null) {
+        autoBetsLeft = autoBetInput === 0 ? null : autoBetInput;
+        autoBetInterval = setInterval(autoBetDropBall, autoBetIntervalMs);
+      } else if (autoBetInterval !== null) {
+        resetAutoBetInterval();
+      }
+    // }
+
+    i=i+1;
+    setTimeout(() => {
+      a=a+1;
+    }, 700);
   }
 
   const betModes = [
@@ -122,7 +133,7 @@
   const rowCounts = rowCountOptions.map((value) => ({ value, label: value.toString() }));
 </script>
 
-<div class="flex flex-col gap-5 p-3 lg:max-w-80 mx-auto">
+<div class="flex flex-col gap-2 p-3 lg:max-w-80 mx-auto">
 <!--  <div class="flex gap-1 rounded-full bg-slate-900 p-1">-->
 <!--    {#each betModes as { value, label }}-->
 <!--      <button-->
@@ -248,22 +259,27 @@
   <!--  </div>-->
   <!--{/if}-->
 
-  <h3 class="text-2xl text-white uppercase text-center font-bold">balls:</h3>
-
-  <div class="flex w-64 mx-auto gap-1 border border-[#CBE0EC] rounded-lg py-3.5 px-3.5">
-    <img class="w-full h-10" src={ boll } alt="">
-    <img class="w-full h-10" src={ boll } alt="">
-    <img class="w-full h-10" src={ bollOff } alt="">
-    <img class="w-full h-10" src={ bollOff } alt="">
-    <img class="w-full h-10" src={ bollOff } alt="">
-    <img class="w-full h-10" src={ bollOff } alt="">
+  <h3 class="text-white uppercase text-center font-bold">balls:</h3>
+  <div class="flex w-40 mx-auto mb-4 gap-1 border border-[#CBE0EC] rounded-lg py-1.5 px-1.5">
+    <div class="relative w-full h-6">
+      <img class="w-full h-full" src={ boll } alt="">
+      <img class={ twMerge('w-full h-6 absolute top-0 left-0 animate-once',i === 2 && 'animate-ping' ) } src={ a > 1 ? bollOff : boll } alt="">
+    </div>
+    <div class="relative w-full h-6">
+      <img class="w-full h-full" src={ bollOff } alt="">
+      <img class={ twMerge('w-full h-6 absolute top-0 left-0 animate-once',i === 1 && 'animate-ping' ) } src={ a > 0 ? bollOff : boll } alt="">
+    </div>
+    <img class="w-full h-6" src={ bollOff } alt="">
+    <img class="w-full h-6" src={ bollOff } alt="">
+    <img class="w-full h-6" src={ bollOff } alt="">
+    <img class="w-full h-6" src={ bollOff } alt="">
   </div>
 
   <button
     on:click={handleBetClick}
     disabled={isDropBallDisabled}
     class={twMerge(
-      'w-64 mx-auto touch-manipulation rounded-md h-20 bg-[linear-gradient(180deg,#F8D918 0%,#FF9D02 100%)] py-3 text-3xl font-bold text-slate-900 transition-colors hover:bg-green-400 active:bg-green-600 disabled:bg-neutral-600 disabled:text-neutral-400',
+      'w-40 mx-auto touch-manipulation rounded-md h-16 bg-[linear-gradient(180deg,#F8D918 0%,#FF9D02 100%)] py-3 text-lg font-bold text-slate-900 uppercase transition-colors hover:bg-green-400 active:bg-green-600 disabled:bg-neutral-600 disabled:text-neutral-400',
       autoBetInterval !== null && 'bg-yellow-500 hover:bg-yellow-400 active:bg-yellow-600',
     )}
     style:background="linear-gradient(180deg, #F8D918 0%, #FF9D02 100%)"

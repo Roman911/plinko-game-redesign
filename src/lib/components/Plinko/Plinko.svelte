@@ -24,7 +24,7 @@
 
 <div class="relative">
   <div class="absolute left-1/2 transform -translate-x-1/2 top-0 z-10">
-    <img class="" src={ imgFly } alt="">
+    <img class="animate-wiggle animate-infinite animate-duration-[2000ms]" src={ imgFly } alt="">
   </div>
   <div class="mx-auto pt-12 flex h-full flex-col lg:px-4 pb-4" style:max-width={`${WIDTH}px`}>
     <div class="relative w-full" style:aspect-ratio={`${WIDTH} / ${HEIGHT}`}>
@@ -38,7 +38,7 @@
     </div>
     <BinsRow />
   </div>
-  <div class="absolute right-1 lg:right-40 top-20 -translate-y-1/2">
+  <div class="absolute right-1 lg:right-40 top-24 -translate-y-1/2">
     <LastWins />
   </div>
 </div>

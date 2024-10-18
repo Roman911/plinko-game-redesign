@@ -27,11 +27,11 @@
 <!--  </nav>-->
 
   <div class="flex-1 lg:px-5">
-    <div class="mx-auto mt-5 min-w-[300px] max-w-xl drop-shadow-xl md:mt-10 lg:max-w-7xl">
+    <div class="mx-auto mt-20 min-w-[300px] max-w-xl drop-shadow-xl md:mt-10 lg:max-w-7xl">
       <div class="overflow-hidden rounded-lg w-full">
-        <div class="px-5 mb-10 text-white text-center overflow-hidden overflow-ellipsis whitespace-nowrap">A player Sho*** out of your town won €35, A player from Edinburg Won €150.</div>
         <Plinko />
         <Sidebar />
+        <div class="px-5 mt-10 text-white text-center overflow-hidden overflow-ellipsis whitespace-nowrap">A player Sho*** out of your town won €35, A player from Edinburg Won €150.</div>
       </div>
     </div>
   </div>

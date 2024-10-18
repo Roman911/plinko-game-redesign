@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { twMerge } from 'tailwind-merge';
   import { binColorsByRowCount } from '$lib/constants/game';
   import { winRecords } from '$lib/stores/game';
 
@@ -10,6 +11,9 @@
   export let winCount = 1;
 
   $: lastWins = $winRecords.slice(-winCount).toReversed();
+
+  let st = 0;
+
 </script>
 
 <!-- Clamps in mobile:
@@ -21,10 +25,11 @@
   style:aspect-ratio={`1 / ${winCount}`}
 >
   {#each lastWins as { binIndex, rowCount, payout: { multiplier } }}
+    {setTimeout(() => {st=1}, 800)}
     <div
       class="flex aspect-square items-center justify-center font-bold text-gray-950"
     >
-      <img src={ img10eur } alt="">
+      <img class={twMerge('animate-jump animate-once animate-ease-in', st===1 && 'animate-jump-out')} src={ img10eur } alt="">
       <!--{multiplier}{multiplier < 100 ? '×' : ''}-->
     </div>
   {/each}
