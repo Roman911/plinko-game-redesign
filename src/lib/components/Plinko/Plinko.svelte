@@ -6,7 +6,7 @@
   import LastWins from './LastWins.svelte';
   import PlinkoEngine from './PlinkoEngine';
 
-  import fly from '$lib/assets/fly.png';
+  import Fly from '$lib/assets/fly.png';
 
   const { WIDTH, HEIGHT } = PlinkoEngine;
 
@@ -24,7 +24,7 @@
 
 <div class="relative">
   <div class="absolute left-1/2 transform -translate-x-1/2 top-0 z-10">
-    <img class="" src={ fly } alt="">
+    <img class="" src={ Fly } alt="">
   </div>
   <div class="mx-auto pt-12 flex h-full flex-col lg:px-4 pb-4" style:max-width={`${WIDTH}px`}>
     <div class="relative w-full" style:aspect-ratio={`${WIDTH} / ${HEIGHT}`}>

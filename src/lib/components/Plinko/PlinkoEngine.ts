@@ -14,6 +14,8 @@ import Matter, { type IBodyDefinition } from 'matter-js';
 import { get } from 'svelte/store';
 import { v4 as uuidv4 } from 'uuid';
 
+import bgLight from '$lib/assets/light.png';
+
 type BallFrictionsByRowCount = {
   friction: NonNullable<IBodyDefinition['friction']>;
   frictionAirByRowCount: Record<RowCount, NonNullable<IBodyDefinition['frictionAir']>>;
@@ -130,7 +132,7 @@ class PlinkoEngine {
       options: {
         width: PlinkoEngine.WIDTH,
         height: PlinkoEngine.HEIGHT,
-        background: 'url("/src/lib/assets/light.png") center center no-repeat',
+        background: `url(${ bgLight }) center center no-repeat`,
         wireframes: false,
       },
     });
