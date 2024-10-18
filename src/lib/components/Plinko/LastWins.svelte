@@ -2,6 +2,8 @@
   import { binColorsByRowCount } from '$lib/constants/game';
   import { winRecords } from '$lib/stores/game';
 
+  import img10eur from '$lib/assets/10eur.png';
+
   /**
    * Number of last wins to display.
    */
@@ -22,7 +24,7 @@
     <div
       class="flex aspect-square items-center justify-center font-bold text-gray-950"
     >
-      <img src="/src/lib/assets/10eur.png" alt="">
+      <img src={ img10eur } alt="">
       <!--{multiplier}{multiplier < 100 ? '×' : ''}-->
     </div>
   {/each}
