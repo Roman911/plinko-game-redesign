@@ -69,8 +69,8 @@ class PlinkoEngine {
    */
   private pinsLastRowXCoords: number[] = [];
 
-  static WIDTH = 760;
-  static HEIGHT = 570;
+  static WIDTH = 660;
+  static HEIGHT = 490;
 
   private static PADDING_X = 52;
   private static PADDING_TOP = 36;
@@ -184,7 +184,7 @@ class PlinkoEngine {
    */
   dropBall() {
     const ballOffsetRangeX = this.pinDistanceX * 0.8;
-    const ballRadius = this.pinRadius * 2;
+    const ballRadius = this.pinRadius * 1.2;
     const { friction, frictionAirByRowCount } = PlinkoEngine.ballFrictions;
 
     const ball = Matter.Bodies.circle(

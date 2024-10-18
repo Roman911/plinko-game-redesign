@@ -6,6 +6,8 @@
   import LastWins from './LastWins.svelte';
   import PlinkoEngine from './PlinkoEngine';
 
+  import fly from '$lib/assets/fly.png';
+
   const { WIDTH, HEIGHT } = PlinkoEngine;
 
   const initPlinko: Action<HTMLCanvasElement> = (node) => {
@@ -22,9 +24,9 @@
 
 <div class="relative">
   <div class="absolute left-1/2 transform -translate-x-1/2 top-0 z-10">
-    <img src="/src/lib/assets/fly.png" alt="">
+    <img src={ fly } alt="">
   </div>
-  <div class="mx-auto pt-12 flex h-full flex-col px-4 pb-4" style:max-width={`${WIDTH}px`}>
+  <div class="mx-auto pt-12 flex h-full flex-col lg:px-4 pb-4" style:max-width={`${WIDTH}px`}>
     <div class="relative w-full" style:aspect-ratio={`${WIDTH} / ${HEIGHT}`}>
       {#if $plinkoEngine === null}
         <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -36,7 +38,7 @@
     </div>
     <BinsRow />
   </div>
-  <div class="absolute right-28 top-1/2 -translate-y-1/2">
+  <div class="absolute right-1 lg:right-40 top-20 -translate-y-1/2">
     <LastWins />
   </div>
 </div>

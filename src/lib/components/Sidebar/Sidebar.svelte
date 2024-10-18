@@ -20,6 +20,9 @@
   import type { FormEventHandler } from 'svelte/elements';
   import { twMerge } from 'tailwind-merge';
 
+  import boll from '$lib/assets/boll.png';
+  import bollOff from '$lib/assets/boll-off.png';
+
   let betMode: BetMode = BetMode.MANUAL;
 
   /**
@@ -245,11 +248,22 @@
   <!--  </div>-->
   <!--{/if}-->
 
+  <h3 class="text-2xl text-white uppercase text-center font-bold">a balls:</h3>
+
+  <div class="flex w-64 mx-auto gap-1 border border-[#CBE0EC] rounded-lg py-3.5 px-3.5">
+    <img class="w-full h-10" src={ boll } alt="">
+    <img class="w-full h-10" src={ boll } alt="">
+    <img class="w-full h-10" src={ bollOff } alt="">
+    <img class="w-full h-10" src={ bollOff } alt="">
+    <img class="w-full h-10" src={ bollOff } alt="">
+    <img class="w-full h-10" src={ bollOff } alt="">
+  </div>
+
   <button
     on:click={handleBetClick}
     disabled={isDropBallDisabled}
     class={twMerge(
-      'touch-manipulation rounded-md bg-[linear-gradient(180deg,#F8D918 0%,#FF9D02 100%)] py-3 font-semibold text-slate-900 transition-colors hover:bg-green-400 active:bg-green-600 disabled:bg-neutral-600 disabled:text-neutral-400',
+      'w-64 mx-auto touch-manipulation rounded-md h-20 bg-[linear-gradient(180deg,#F8D918 0%,#FF9D02 100%)] py-3 text-3xl font-bold text-slate-900 transition-colors hover:bg-green-400 active:bg-green-600 disabled:bg-neutral-600 disabled:text-neutral-400',
       autoBetInterval !== null && 'bg-yellow-500 hover:bg-yellow-400 active:bg-yellow-600',
     )}
     style:background="linear-gradient(180deg, #F8D918 0%, #FF9D02 100%)"

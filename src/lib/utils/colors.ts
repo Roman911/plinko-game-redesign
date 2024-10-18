@@ -28,12 +28,12 @@ export function getBinColors(rowCount: RowCount) {
     const redToYellowLength = Math.ceil(binCount / 2);
 
     const redToYellowBg = [
-      "rgba(171,126,234)",
-      "rgba(43,140,242)",
-      "rgba(6,211,176)",
-      "rgba(6,211,176)",
-      "rgba(126,231,26)",
-      "rgba(126,231,26)",
+      "url(/src/lib/assets/500.png)",
+      "url(/src/lib/assets/100.png)",
+      "url(/src/lib/assets/50.png)",
+      "url(/src/lib/assets/10.png)",
+      "url(/src/lib/assets/7.png)",
+      "url(/src/lib/assets/1.png)",
     ];
 
     const redToYellowShadow = interpolateRgbColors(
