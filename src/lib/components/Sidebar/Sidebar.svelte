@@ -12,7 +12,7 @@
 
   import boll from '$lib/assets/boll.png';
   import bollOff from '$lib/assets/boll-off.png';
-  import modalArt from '$lib/assets/modal-art.png'
+  const modalArt = new URL('$lib/assets/modal-art.png', import.meta.url).href;
 
   $: geoCity = undefined;
   $: modalOpen = false;
