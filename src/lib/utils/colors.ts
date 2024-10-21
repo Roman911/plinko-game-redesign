@@ -1,6 +1,6 @@
 import type { RowCount } from '$lib/types';
 
-import img500 from '$lib/assets/500.png';
+import img400 from '$lib/assets/400.png';
 import img100 from '$lib/assets/100.png';
 import img50 from '$lib/assets/50.png';
 import img10 from '$lib/assets/10.png';
@@ -35,7 +35,7 @@ export function getBinColors(rowCount: RowCount) {
     const redToYellowLength = Math.ceil(binCount / 2);
 
     const redToYellowBg = [
-      `url(${img500})`,
+      `url(${img400})`,
       `url(${img100})`,
       `url(${img50})`,
       `url(${img10})`,

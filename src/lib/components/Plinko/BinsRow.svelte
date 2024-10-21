@@ -52,17 +52,12 @@
   {#if $plinkoEngine}
     <div class="flex gap-[1%]" style:width={`${($plinkoEngine.binsWidthPercentage ?? 0) * 100}%`}>
       {#each binPayouts[$rowCount][$riskLevel] as payout, binIndex}
-        <!-- Font-size clamping:
-              - Mobile (< 1024px): From 6px at 370px viewport width to 8px at 600px viewport width
-              - Desktop (>= 1024px): From 10px at 1024px viewport width to 12px at 1100px viewport width
-         -->
         <div
           use:initAnimation
           class='flex min-w-0 flex-1 items-center justify-center bg-no-repeat bg-cover bg-center'
           style:background-image={binColorsByRowCount[$rowCount].background[binIndex]}
           style={`--my-color-var: ${binColorsByRowCount[$rowCount].background[binIndex]}`}
         >
-          <!--{payout}-->
         </div>
       {/each}
     </div>

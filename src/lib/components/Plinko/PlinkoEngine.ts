@@ -72,10 +72,10 @@ class PlinkoEngine {
   private pinsLastRowXCoords: number[] = [];
 
   static WIDTH = 660;
-  static HEIGHT = 590;
+  static HEIGHT = 520;
 
   private static PADDING_X = 52;
-  private static PADDING_TOP = 150;
+  private static PADDING_TOP = 100;
   private static PADDING_BOTTOM = 28;
 
   private static PIN_CATEGORY = 0x0001;
@@ -93,7 +93,7 @@ class PlinkoEngine {
     frictionAirByRowCount: {
       8: 0.0395,
       9: 0.041,
-      10: 0.038,
+      10: 0.032,
       11: 0.0355,
       12: 0.0414,
       13: 0.0437,
