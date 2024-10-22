@@ -79,3 +79,5 @@ export const binProbabilities = derived<
   }
   return probabilities;
 });
+
+export const numberGame = writable<number>(0);

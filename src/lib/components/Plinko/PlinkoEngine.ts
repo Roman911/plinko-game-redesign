@@ -185,15 +185,11 @@ class PlinkoEngine {
    * Drops a new ball from the top with a random horizontal offset, and deducts the balance.
    */
   dropBall() {
-    const ballOffsetRangeX = this.pinDistanceX * 0.8;
     const ballRadius = this.pinRadius * 1.2;
     const { friction, frictionAirByRowCount } = PlinkoEngine.ballFrictions;
 
     const ball = Matter.Bodies.circle(
-      getRandomBetween(
-        this.canvas.width / 2 - ballOffsetRangeX,
-        this.canvas.width / 2 + ballOffsetRangeX,
-      ),
+      getRandomBetween(),
       0,
       ballRadius,
       {

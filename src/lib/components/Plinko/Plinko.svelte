@@ -5,6 +5,7 @@
   import BinsRow from './BinsRow.svelte';
   import LastWins from './LastWins.svelte';
   import PlinkoEngine from './PlinkoEngine';
+  import sound from '$lib/assets/bg_music_loop.mp3';
 
   const imgFly = new URL('$lib/assets/fly.png', import.meta.url).href
 
@@ -13,6 +14,10 @@
   const initPlinko: Action<HTMLCanvasElement> = (node) => {
     $plinkoEngine = new PlinkoEngine(node);
     $plinkoEngine.start();
+
+    let song = new Audio(sound);
+    song.volume=0.8;
+    song.autoplay=true;
 
     return {
       destroy: () => {

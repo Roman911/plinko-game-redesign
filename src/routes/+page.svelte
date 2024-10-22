@@ -3,6 +3,7 @@
   import Plinko from '$lib/components/Plinko';
   import SettingsWindow from '$lib/components/SettingsWindow';
   import Sidebar from '$lib/components/Sidebar';
+  import Modal from '$lib/components/Modal';
   import { setBalanceFromLocalStorage, writeBalanceToLocalStorage } from '$lib/utils/game';
   import { onMount } from 'svelte';
 
@@ -25,6 +26,7 @@
 
   <SettingsWindow />
   <LiveStatsWindow />
+  <Modal />
 </div>
 
 <style>
