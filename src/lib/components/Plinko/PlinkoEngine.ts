@@ -89,11 +89,11 @@ class PlinkoEngine {
    * expected bin payout.
    */
   private static ballFrictions: BallFrictionsByRowCount = {
-    friction: 0.5,
+    friction: 0.2,
     frictionAirByRowCount: {
       8: 0.0395,
       9: 0.041,
-      10: 0.032,
+      10: 0.03,
       11: 0.0355,
       12: 0.0414,
       13: 0.0437,
@@ -190,7 +190,7 @@ class PlinkoEngine {
 
     const ball = Matter.Bodies.circle(
       getRandomBetween(),
-      20,
+      17,
       ballRadius,
       {
         restitution: 0.8, // Bounciness

@@ -27,7 +27,7 @@
         <!-- Modal content -->
         <img class="block mx-auto" src={ imgSound } alt="">
         <p class="mb-4 -mt-6 text-[#262626] text-sm font-bold text-center">
-          Wanna play with sounds?
+          Do you want to play with sound?
         </p>
         <div class="flex justify-center mb-2 gap-2">
           <button on:click={() => handleClick(true)} type="button" class="btn btn-on">
