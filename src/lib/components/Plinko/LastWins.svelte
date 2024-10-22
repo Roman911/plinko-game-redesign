@@ -28,7 +28,7 @@
         lastWins = [];
         animation = false;
       }, 200);
-    }, 3800);
+    }, 3200);
   }
 </script>
 
@@ -36,7 +36,7 @@
   class="flex w-32 flex-col overflow-hidden lg:w-80"
   style:aspect-ratio={`1 / ${winCount}`}
 >
-  {#each lastWins as { payout: { multiplier } }, i (i)}
+  {#each lastWins as { payout: { multiplier } }}
     <div
       class="flex aspect-square items-center justify-center font-bold text-gray-950"
     >
