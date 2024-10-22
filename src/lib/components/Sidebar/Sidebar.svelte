@@ -145,9 +145,7 @@
 
   <div class="box">
     <Marquee pauseOnClick={ true } direction='left' speed={40} play={ true } >
-      <p class="whitespace-pre">
-        A player Sho*** from { geoCity || 'your city' } won <span class="font-bold text-[#FFE875]"> €250 </span>              A player Dem** from { geoCity || 'your city' } won <span class="font-bold text-[#FFE875]">€150</span>
-      </p>
+      <p class="whitespace-pre"><span class="font-bold text-[#FFE875]">  €150             </span>A player Sho*** from { geoCity || 'your city' } won <span class="font-bold text-[#FFE875]"> €250 </span>            A player Dem** from { geoCity || 'your city' } won <span>  </span></p>
     </Marquee>
   </div>
 </div>

@@ -190,7 +190,7 @@ class PlinkoEngine {
 
     const ball = Matter.Bodies.circle(
       getRandomBetween(),
-      0,
+      20,
       ballRadius,
       {
         restitution: 0.8, // Bounciness

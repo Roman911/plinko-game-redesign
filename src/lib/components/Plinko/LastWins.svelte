@@ -28,7 +28,7 @@
         lastWins = [];
         animation = false;
       }, 200);
-    }, 3200);
+    }, 3600);
   }
 </script>
 

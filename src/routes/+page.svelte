@@ -4,6 +4,7 @@
   import SettingsWindow from '$lib/components/SettingsWindow';
   import Sidebar from '$lib/components/Sidebar';
   import Modal from '$lib/components/Modal';
+  import ModalSound from '$lib/components/ModalSound';
   import { setBalanceFromLocalStorage, writeBalanceToLocalStorage } from '$lib/utils/game';
   import { onMount } from 'svelte';
 
@@ -27,6 +28,7 @@
   <SettingsWindow />
   <LiveStatsWindow />
   <Modal />
+  <ModalSound />
 </div>
 
 <style>

@@ -5,7 +5,6 @@
   import BinsRow from './BinsRow.svelte';
   import LastWins from './LastWins.svelte';
   import PlinkoEngine from './PlinkoEngine';
-  import sound from '$lib/assets/bg_music_loop.mp3';
 
   const imgFly = new URL('$lib/assets/fly.png', import.meta.url).href
 
@@ -15,10 +14,6 @@
     $plinkoEngine = new PlinkoEngine(node);
     $plinkoEngine.start();
 
-    let song = new Audio(sound);
-    song.volume=0.8;
-    song.autoplay=true;
-
     return {
       destroy: () => {
         $plinkoEngine?.stop();
@@ -27,7 +22,7 @@
   };
 </script>
 
-<div class="relative mt-20">
+<div class="relative mt-10">
   <div class="absolute left-1/2 transform -translate-x-1/2 top-0 z-10 pt-10">
     <div class="animate-bounce animate-infinite animate-duration-[3000ms]">
       <img class="w-32 animate-wiggle animate-infinite animate-duration-[2000ms]" src={ imgFly } alt="">
